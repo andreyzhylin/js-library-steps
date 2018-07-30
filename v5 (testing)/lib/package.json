@@ -1,0 +1,35 @@
+{
+  "name": "@lykkex/lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "compile": "tsc --emitDeclarationOnly",
+    "build": "rollup -c",
+    "start": "npm test && npm run-script compile && npm run-script build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^23.3.0",
+    "jest": "^23.4.1",
+    "rollup": "^0.63.4",
+    "rollup-plugin-typescript": "^0.8.1",
+    "rollup-plugin-uglify": "^4.0.0",
+    "ts-jest": "^23.0.1",
+    "typescript": "^2.9.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/src/__tests__/.*)",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx"
+    ]
+  }
+}
